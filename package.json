@@ -1,0 +1,17 @@
+{
+  "name": "puppet",
+  "version": "1.0.0",
+  "description": "running headless chrome test",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "parse-domain": "^2.0.0",
+    "puppeteer": "^1.2.0",
+    "random-words": "^1.1.0",
+    "rapidapi-connect": "0.0.6"
+  }
+}
