@@ -9,7 +9,7 @@ const url = 'http://images.google.com';
     await page.goto(url);
     const searchBar = await page.$('#lst-ib');
     await searchBar.click();
-    await page.keyboard.type(`${random()}`);
+    await page.keyboard.type(random());
     const submit = await page.$('#mKlEF');
     await submit.click();
     await page.keyboard.type(random());
