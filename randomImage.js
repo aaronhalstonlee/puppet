@@ -9,14 +9,14 @@ const url = 'http://images.google.com';
     await page.goto(url);
     const searchBar = await page.$('#lst-ib');
     await searchBar.click();
-    await page.keyboard.type(`${random()}`);
-    const submit = await page.$('#mKlEF');
-    await submit.click();
     await page.keyboard.type(random());
     await page.keyboard.press('Enter');
-    
-    await page.$$eval('img', elements => setTimeout(elements[0].click(), 1500));
 
+    await page.waitForSelector('#isr_mc', { timeout: 10000 } );
+    const imageUrl = await page.evaluate(() => document.querySelector('#isr_mc a').href );
+    console.log(imageUrl);
+
+    await browser.close();
 })();
 
 
